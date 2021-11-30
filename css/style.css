@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background: linear-gradient(180deg, #009688 200px, #d6dbd7 100px);
+    position: relative;
+}
+
+i{
+    color: #b1b1b1;
+    font-size: 1.3rem;
+    padding-right: 1rem;
+}
+
+img{
+    width: 60px;
+    border-radius: 50%;
+
+}
+
+.container{
+    width: 80%;
+    height: 95vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+/**** sezione utente ****/
+
+/* header */
+
+.containerUtenti{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+}
+
+.containerUtenti header{
+    background-color: #eaeaea;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nomeUtente{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+/* notifiche */
+
+.notifiche{
+    background-color: #8edafc;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+.notifiche i{
+    background-color: white;
+    color: #8edafc;
+    padding: 15px;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+
+.notifiche p:nth-child(2){
+    color: #6b7376;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+/* ricerca Utenti */
+
+.ricercaUtenti{
+    background-color: #fafafa;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ricercaUtenti div{
+    background-color: white;
+    width: 96%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.ricercaUtenti input{
+    border: none;
+}
+
+/* chat utenti */
+
+.utenti{
+    padding: 15px; 
+}
+
+.utenti:not(:last-child){
+    border-bottom: 1px solid lightgray;
+}
+
+.utenti span{
+    vertical-align: top;
+    padding-left: 15px;
+}
+
+/****** sezione chat messaggi *****/
+
+/* inizio header */
+
+.containerChat{
+    width: 70%;
+    height: 100%;
+}
+
+.containerChat header{
+    height: 5rem;
+    background-color: #eaeaea;
+    border-left: 2px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerChat .nomeUtente p:nth-child(2){
+    color: #6b7376;
+    font-size: 0.8rem;
+}
+
+/* inizio main */
+
+main{
+    height: calc(95vh - 10rem);
+    background-image: url(../img/mine.jpg);
+}
+
+.containerBox{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    width: 20rem;
+    margin-bottom: .7rem;
+    border-radius: 10px;
+    padding: 12px 5px 5px 12px;
+
+}
+
+.box p:nth-child(2){
+    text-align: right;
+    font-size: .7rem;
+    color: #6b7376;
+    padding-top: 5px;
+
+}
+
+.inviato{
+    background-color: #d5f9ba;
+    align-self: end;
+
+}
+
+.ricevuto{
+    background-color: white;
+}
+
+/* footer */
+
+footer{
+    height: 5rem;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+}
+
+footer i{
+    color: #6b7376;
+    font-size: 1.5rem;
+}
+
+footer input{
+    border: none;
+    border-radius: 5px;
+    padding: 18px;
+}
+
+
+
+
+/***** debug ****/
+
+/* .container{
+    background-color: blue;
+} */
+
+/* .containerUtenti{
+    background-color: yellow;
+} */
+
+/* .containerChat{
+    background-color: tomato;
+} */
