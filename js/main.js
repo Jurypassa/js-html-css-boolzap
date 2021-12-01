@@ -84,6 +84,7 @@ const app = new Vue({
         ],
         currentIndex: 0,
         newMessage: "",
+        ricercaChat: "",
     },
     methods: {
         selezionaChat: function(index) {
@@ -106,6 +107,11 @@ const app = new Vue({
                 message: "Ok",
                 status: 'received'
             });
-        }
+        },
+
+        confronto: function(){
+            this.contacts.name.include("ricercaChat");
+        },
+
     }
 })

@@ -124,6 +124,10 @@ img{
     padding-left: 15px;
 }
 
+.invisible{
+    display: none;
+}
+
 /****** sezione chat messaggi *****/
 
 /* inizio header */
