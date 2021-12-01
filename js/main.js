@@ -83,10 +83,29 @@ const app = new Vue({
             },
         ],
         currentIndex: 0,
+        newMessage: "",
     },
     methods: {
         selezionaChat: function(index) {
             this.currentIndex = index;
         },
+
+        nuovoMessaggio: function(){
+            this.contacts[this.currentIndex].messages.push({
+                date: '10/01/2020 15:30:55',
+                message: this.newMessage,
+                status: 'sent'
+            });
+
+            setTimeout(this.rispostaOK, 2000);
+            
+        },
+        rispostaOK: function(){
+            this.contacts[this.currentIndex].messages.push({
+                date: '10/01/2020 15:30:55',
+                message: "Ok",
+                status: 'received'
+            });
+        }
     }
 })
