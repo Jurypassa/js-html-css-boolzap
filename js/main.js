@@ -82,8 +82,11 @@ const app = new Vue({
                 ],
             },
         ],
+        currentIndex: 0,
     },
     methods: {
-
+        selezionaChat: function(index) {
+            this.currentIndex = index;
+        },
     }
 })

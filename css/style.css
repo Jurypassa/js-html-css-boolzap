@@ -39,7 +39,7 @@ img{
 
 .containerUtenti{
     width: 30%;
-    height: 100%;
+    height: 95vh;
     background-color: white;
 }
 
@@ -104,9 +104,15 @@ img{
 }
 
 /* chat utenti */
+.boxUtenti{
+    height:  calc(100% - 15rem);
+    overflow-y: scroll;
+    cursor: pointer;
+}
 
 .utenti{
     padding: 15px; 
+
 }
 
 .utenti:not(:last-child){
@@ -146,6 +152,7 @@ img{
 main{
     height: calc(95vh - 10rem);
     background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
 }
 
 .containerBox{
@@ -157,11 +164,14 @@ main{
 }
 
 .box{
-    width: 20rem;
     margin-bottom: .7rem;
     border-radius: 10px;
     padding: 12px 5px 5px 12px;
 
+}
+
+.box p:first-child{
+    padding-right: 30px;
 }
 
 .box p:nth-child(2){
@@ -172,14 +182,15 @@ main{
 
 }
 
-.inviato{
+.sent{
     background-color: #d5f9ba;
     align-self: end;
-
 }
 
-.ricevuto{
+.received{
+    min-width: 5rem;
     background-color: white;
+    align-self: start;
 }
 
 /* footer */

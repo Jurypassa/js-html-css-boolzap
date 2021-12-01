@@ -63,9 +63,11 @@
             <!-- / barra di ricerca utenti -->
 
             <!-- inizio sezione chat attive -->
-            <div class="utenti" v-for="(contact, index) in contacts">
-                <img :src="('img/avatar' + contact.avatar + '.jpg')" :alt="contact.name">
-                <span>{{contact.name}}</span>
+            <div class="boxUtenti">
+                <div class="utenti" v-for="(contact, index) in contacts" @click="selezionaChat(index)">
+                    <img :src="('img/avatar' + contact.avatar + '.jpg')" :alt="contact.name">
+                    <span>{{contact.name}}</span>
+                </div>
             </div>
             <!-- / sezione chat attive -->
 
@@ -100,11 +102,11 @@
             <main>
 
                 <div class="containerBox">
-                    <div class="box inviato">
-                        <p>lorem</p>
-                        <p>10/01/2020 15:30:55</p>
+                    <div class="box" v-for="(contact, index) in contacts[currentIndex].messages" :class="contact.status == 'sent' ? 'sent' : 'received'">
+                        <p>{{contact.message}}</p>
+                        <p>{{contact.date}}</p>
                     </div>
-
+                </div>
             </main>
             <!-- / main chat -->
 
