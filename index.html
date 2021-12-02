@@ -57,14 +57,14 @@
             <div class="ricercaUtenti">
                 <div>
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat" size="60" v-model="ricercaChat">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" size="60" v-model="ricercaChat"  @keyup="confronto">
                 </div>
             </div>
             <!-- / barra di ricerca utenti -->
 
             <!-- inizio sezione chat attive -->
             <div class="boxUtenti">
-                <div class="utenti" v-for="(contact, index) in contacts" @click="selezionaChat(index)" :class="contacts[index].visible == false ? 'invisible' : ''" @keyup="confronto(index)">
+                <div class="utenti" v-for="(contact, index) in contacts" @click="selezionaChat(index)" :class="contacts[index].visible == false ? 'invisible' : ''">
                     <img :src="('img/avatar' + contact.avatar + '.jpg')" :alt="contact.name">
                     <span>{{contact.name}}</span>
                 </div>

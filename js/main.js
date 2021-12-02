@@ -109,11 +109,16 @@ const app = new Vue({
             });
         },
 
-        confronto: function(index){
-            const aaa= this.contacts[index].name.includes(this.ricercaChat);
-            if(aaa !== true){
-                this.contacts[index].visible = false;
+        confronto: function(){
+            for(let i = 0; i < this.contacts.length; i++){
+                const confronto= this.contacts[i].name.includes(this.ricercaChat);
+                if(confronto !== true){
+                    this.contacts[i].visible = false;
+                }else{
+                    this.contacts[i].visible = true;
+                }
             }
+            
         },
 
     }
