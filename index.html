@@ -64,7 +64,7 @@
 
             <!-- inizio sezione chat attive -->
             <div class="boxUtenti">
-                <div class="utenti" v-for="(contact, index) in contacts" @click="selezionaChat(index)" :class="{invisible : !contact.visible}">
+                <div class="utenti" v-for="(contact, index) in contacts" @click="selezionaChat(index)" :class="contacts[index].visible == false ? 'invisible' : ''" @keyup="confronto(index)">
                     <img :src="('img/avatar' + contact.avatar + '.jpg')" :alt="contact.name">
                     <span>{{contact.name}}</span>
                 </div>
